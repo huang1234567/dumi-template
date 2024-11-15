@@ -1,0 +1,43 @@
+@class-prefix-divider: ~'dfyh-divider';
+@import '~@/styles/theme.less';
+
+.dfyh-cardlist{
+  // 多选框样式
+  .am-checkbox-inner{
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    // border-width: 0 2px 2px 0;
+  }
+  .am-checkbox-inner:after{
+    border-width: 0 2px 2px 0;
+  }
+  .am-list-body{
+    border:none;
+  }
+}
+.dfyh-cardlist .am-list-content .am-list-item{
+  padding-left: 0px
+}
+input[type="checkbox"]{
+  -webkit-appearance: none;   /*改變瀏覽器默認風格,不寫此句自己寫的style不生效*/
+  // background: #373E59;  /*設置複選框背景色*/
+  //  border:1px #909DBF solid;  /*設置邊框*/
+  width: 18px;
+  height: 18px;
+  border: 1px #ccc solid;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+input[type="checkbox"]:checked{
+  background:@minor-color;
+  color: #fff;
+}
+input[type="checkbox"]:checked:after{  /*選中時複選框勾勾樣式*/
+  content:'✔';
+  margin-left:3px;
+  // content: '\0020';
+  transform: rotate(45deg);
+  // background:@minor-color;
+  // color: #fff;
+}
